@@ -11,6 +11,12 @@
       "description": "Screenshot of the TODO App login page",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/todo.png?alt=media&token=72960683-3006-4903-9f1d-50ce09ab3a09",
       "imageHint": "login page"
+    },
+    {
+      "id": "calculator-app-image",
+      "description": "Screenshot of the Calculator App",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/calc.png?alt=media&token=90835581-b7ec-4d01-981a-8cb2afc72474",
+      "imageHint": "calculator ui"
     }
   ]
 }
