@@ -75,6 +75,13 @@ export const data = {
   ],
   personalProjects: [
     {
+      name: 'TODO App',
+      description:
+        'A full-stack TODO application using the MERN stack (MongoDB, Express.js, React, Node.js). Features include user authentication with Google Sign-In, allowing users to manage their tasks securely.',
+      tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Vercel'],
+      liveDemo: 'https://todoapplatest.vercel.app',
+    },
+    {
       name: 'Calculator Application',
       description:
         'Built a responsive calculator using Angular with real-time calculation and error handling. Applied modular architecture and clean UI design principles for better maintainability. Deployed using Vercel for continuous integration and quick access.',
