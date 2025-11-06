@@ -36,13 +36,14 @@ export function Hero() {
       </div>
       <div className="relative">
         {profilePic && (
-          <div className="w-48 h-48 sm:w-64 sm:h-64 relative">
+          <div className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
             <Image
               src={profilePic.imageUrl}
               alt={data.name}
               fill
               data-ai-hint={profilePic.imageHint}
-              className="object-cover rounded-full border-4 border-primary/20 shadow-lg"
+              className="object-cover"
+              sizes="(max-width: 640px) 192px, 256px"
             />
           </div>
         )}
