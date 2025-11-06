@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { data } from '@/lib/data';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Mail, Phone, MapPin, Download } from 'lucide-react';
+import { Mail, Phone, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import placeholderImages from '@/lib/placeholder-images.json';
 
@@ -36,12 +35,17 @@ export function Hero() {
          </div>
       </div>
       <div className="relative">
-        <Avatar className="w-48 h-48 sm:w-64 sm:h-64 border-4 border-primary/20 shadow-lg">
-          {profilePic && (
-            <AvatarImage src={profilePic.imageUrl} alt={data.name} data-ai-hint={profilePic.imageHint} />
-          )}
-          <AvatarFallback>{data.name.substring(0, 2)}</AvatarFallback>
-        </Avatar>
+        {profilePic && (
+          <div className="w-48 h-48 sm:w-64 sm:h-64 relative border-4 border-primary/20 shadow-lg rounded-full overflow-hidden">
+            <Image 
+              src={profilePic.imageUrl} 
+              alt={data.name} 
+              data-ai-hint={profilePic.imageHint}
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+        )}
         <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-accent rounded-full -z-10 animate-pulse"></div>
         <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary rounded-lg -z-10 animate-pulse delay-75"></div>
       </div>
