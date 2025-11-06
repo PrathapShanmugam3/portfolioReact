@@ -9,7 +9,7 @@
     {
       "id": "todo-app-image",
       "description": "Screenshot of the TODO App login page",
-      "imageUrl": "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bG9naW4lMjBwYWdlfGVufDB8fHx8MTc2MjQxMjIzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/todo.png?alt=media&token=72960683-3006-4903-9f1d-50ce09ab3a09",
       "imageHint": "login page"
     }
   ]
