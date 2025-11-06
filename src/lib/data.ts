@@ -84,8 +84,8 @@ export const data = {
     {
       name: 'Calculator Application',
       description:
-        'Built a responsive calculator using Angular with real-time calculation and error handling. Applied modular architecture and clean UI design principles for better maintainability. Deployed using Vercel for continuous integration and quick access.',
-      tech: ['Angular', 'Vercel'],
+        'Built a responsive calculator using Angular and Bootstrap with real-time calculation and error handling. Applied modular architecture and clean UI design principles for better maintainability. Deployed using Vercel for continuous integration and quick access.',
+      tech: ['Angular', 'Bootstrap', 'Vercel'],
       liveDemo: 'https://calculator-nu-gilt.vercel.app/',
     },
     {
