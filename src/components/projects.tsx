@@ -1,24 +1,25 @@
 "use client"
-import { useState } from "react";
-import Image from 'next/image';
 import { data } from "@/lib/data";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import placeholderImages from '@/lib/placeholder-images.json';
+import { PortfolioData, Project } from '@/lib/types';
+import { ArrowUpRight, Github } from "lucide-react";
+import Image from 'next/image';
+import { useState } from "react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ArrowUpRight, Github } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { cn } from "@/lib/utils";
-import placeholderImages from '@/lib/placeholder-images.json';
 
 
 export function Projects() {
-  const allProjects = [...data.projects, ...data.personalProjects];
+  const typedData = data as PortfolioData;
+  const allProjects: Project[] = [...typedData.projects, ...typedData.personalProjects];
   const allTech = ["All", ...Array.from(new Set(allProjects.flatMap(p => p.tech)))];
-  
+
   const [filter, setFilter] = useState("All");
 
-  const filteredProjects = filter === 'All' 
-    ? allProjects 
+  const filteredProjects = filter === 'All'
+    ? allProjects
     : allProjects.filter(p => p.tech.includes(filter));
 
   return (
@@ -39,7 +40,7 @@ export function Projects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredProjects.map((project, index) => {
-          const projectImage = 'image' in project ? placeholderImages.placeholderImages.find(p => p.id === project.image) : undefined;
+          const projectImage = placeholderImages.placeholderImages.find((p: any) => p.id === project.image);
           return (
             <Card key={index} className="flex flex-col group hover:border-primary transition-colors overflow-hidden">
               <CardHeader>
@@ -52,34 +53,34 @@ export function Projects() {
               </CardHeader>
               <CardContent className="flex-grow relative">
                 <p className="text-muted-foreground transition-opacity duration-300 group-hover:opacity-0">{project.description}</p>
-                 {projectImage && (
+                {projectImage && (
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Image
-                        src={projectImage.imageUrl}
-                        alt={project.name}
-                        fill
-                        data-ai-hint={projectImage.imageHint}
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
+                      src={projectImage.imageUrl}
+                      alt={project.name}
+                      fill
+                      data-ai-hint={projectImage.imageHint}
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
-                 )}
+                )}
               </CardContent>
               <CardFooter>
                 <div className="flex items-center gap-4">
-                  {'liveDemo' in project && project.liveDemo && (
-                     <Button variant="outline" asChild>
-                       <a href={project.liveDemo} target="_blank" rel="noreferrer">
-                         Live Demo <ArrowUpRight className="h-4 w-4 ml-2" />
-                       </a>
-                     </Button>
+                  {project.liveDemo && (
+                    <Button variant="outline" asChild>
+                      <a href={project.liveDemo} target="_blank" rel="noreferrer">
+                        Live Demo <ArrowUpRight className="h-4 w-4 ml-2" />
+                      </a>
+                    </Button>
                   )}
-                   {'codeLink' in project && project.codeLink && (
-                     <Button variant="ghost" asChild>
-                       <a href={project.codeLink} target="_blank" rel="noreferrer">
-                         <Github className="h-4 w-4 mr-2" /> View Code
-                       </a>
-                     </Button>
+                  {project.codeLink && (
+                    <Button variant="ghost" asChild>
+                      <a href={project.codeLink} target="_blank" rel="noreferrer">
+                        <Github className="h-4 w-4 mr-2" /> View Code
+                      </a>
+                    </Button>
                   )}
                 </div>
               </CardFooter>

@@ -17,8 +17,9 @@ import {
   TypeScript,
   Vercel
 } from '@/components/icons';
+import { PortfolioData } from './types';
 
-export const data = {
+export const data: PortfolioData = {
   name: 'Prathap Shanmugam',
   title: 'Full Stack Developer',
   email: 'prathapshanmugam5@gmail.com',
