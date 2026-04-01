@@ -6,7 +6,6 @@ import {
   Firebase,
   GitHub,
   GitLab,
-  Java,
   JavaScript,
   MongoDB,
   MySQL,
@@ -15,9 +14,8 @@ import {
   ReactJs,
   Render,
   Spring,
-  TailwindCSS,
   TypeScript,
-  Vercel,
+  Vercel
 } from '@/components/icons';
 
 export const data = {
@@ -99,6 +97,14 @@ export const data = {
       tech: ['Angular', 'Vercel'],
       liveDemo: 'https://portfolio-react-blush-eight.vercel.app/',
       image: 'portfolio-app-image',
+    },
+    {
+      name: 'Expense Tracker App',
+      description:
+        'Expense Tracker is a mobile application built with Flutter that helps users track their daily expenses. It uses Node.js for the backend and MySQL for the database. Users can add, edit, and delete expenses, and view them in a list format.',
+      tech: ['Flutter', 'Node js', 'Mysql'],
+      liveDemo: 'https://drive.google.com/file/d/1i1av3M-OGy0uC4K7P3bgjnocpSeHvLDF/view?usp=sharing',
+      image: 'expense-tracker-image',
     },
   ],
   skills: [

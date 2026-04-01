@@ -3,38 +3,44 @@
     {
       "id": "profile-picture",
       "description": "Prathap Shanmugam profile picture",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/WhatsApp%20Image%202025-09-08%20at%2010.43.19%20AM.jpeg?alt=media&token=16131b6b-d5ae-4b42-8cd2-06efe01e3d1d",
+      "imageUrl": "/img/pi7_passport_photo.jpeg",
       "imageHint": "professional headshot"
     },
     {
       "id": "todo-app-image",
       "description": "Screenshot of the TODO App login page",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/todo.png?alt=media&token=72960683-3006-4903-9f1d-50ce09ab3a09",
+      "imageUrl": "/img/todo.jpeg",
       "imageHint": "login page"
     },
     {
       "id": "calculator-app-image",
       "description": "Screenshot of the Calculator App",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/calc.png?alt=media&token=90835581-b7ec-4d01-981a-8cb2afc72474",
+      "imageUrl": "/img/calc.jpeg",
       "imageHint": "calculator ui"
     },
     {
       "id": "portfolio-app-image",
       "description": "Screenshot of the Portfolio App",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/portfolio.png?alt=media&token=b04b7579-a9bb-42d3-9860-92c744531c70",
+      "imageUrl": "/img/portfolio.jpeg",
       "imageHint": "portfolio website"
     },
     {
       "id": "employee-portal-image",
       "description": "Screenshot of the OASYS Employee Portal",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/employeeportal.png?alt=media&token=1eac08bd-4b31-496d-a262-5fcd8b52bf21",
+      "imageUrl": "/img/empPortal.jpeg",
       "imageHint": "employee portal"
     },
     {
       "id": "cooptex-erp-image",
       "description": "Screenshot of the COOPTEX ERP System",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/datacode-87922.appspot.com/o/cooptex.png?alt=media&token=3bd5812e-0047-401f-b4e3-bcb7e56328d1",
+      "imageUrl": "/img/coptex.jpeg",
       "imageHint": "erp system"
+    },
+      {
+      "id": "expense-tracker-image",
+      "description": "Screenshot of the Expense Tracker App",
+      "imageUrl": "/img/expense.jpeg",
+      "imageHint": "expense tracker"
     }
   ]
 }
