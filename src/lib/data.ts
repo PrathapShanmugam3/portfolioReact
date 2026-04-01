@@ -39,7 +39,7 @@ export const data: PortfolioData = {
     },
   ],
   summary:
-    'Full-Stack Developer with over 2 years of experience in designing and delivering scalable web applications using Angular, React, Spring Boot, and Node.js. Proficient in building RESTful APIs, and optimizing databases including MySQL, MongoDB, and PostgreSQL. Skilled in developing dynamic, user-friendly interfaces and ensuring backend efficiency through clean code practices, CI/CD pipelines, and Agile methodologies. Adept at collaborating with cross-functional teams, solving complex problems, and delivering high-quality solutions that enhance performance and user experience.',
+    'Full-Stack Developer with over 2.5 + years of experience in designing and delivering scalable web applications using Angular, React, Spring Boot, and Node.js. Proficient in building RESTful APIs, and optimizing databases including MySQL, MongoDB, and PostgreSQL. Skilled in developing dynamic, user-friendly interfaces and ensuring backend efficiency through clean code practices, CI/CD pipelines, and Agile methodologies. Adept at collaborating with cross-functional teams, solving complex problems, and delivering high-quality solutions that enhance performance and user experience.',
   workExperience: [
     {
       company: 'OASYS Cybernetics Pvt. Ltd',
