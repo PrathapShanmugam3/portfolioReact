@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\usepackage{enumitem}
+
+% Same small gap above every bullet list and between bullets.
+\setlist[itemize]{topsep=2pt, partopsep=0pt, itemsep=1.5pt, parsep=0pt, leftmargin=1.2em}
+
+% Left-align (no stretching or hyphenation) school and company names.
+\titleformat{\subsection}{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{14pt}\selectfont\bfseries\raggedright\uppercase}{}{0em}{}
+\renewcommand{\sectionsep}{\vspace{6pt}}
+\titleformat{\section}{\color{headings}\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{19pt}\selectfont\raggedright\uppercase}{}{0em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   ATS version: same Deedy styling, one column so parsers read it in order.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Prathap}{Shanmugam}{ \urlstyle{same}\href{mailto:prathapshanmugam5@gmail.com}{prathapshanmugam5@gmail.com} | \href{tel:+919345749329}{+91 9345749329} | Full Stack Developer | Trichy, India\\
+\href{https://github.com/PrathapShanmugam3}{github.com/PrathapShanmugam3} | \href{https://www.linkedin.com/in/prathap-shanmugam-362b69235}{LinkedIn} | \href{https://gitlab.com/prathapshanmugam}{GitLab} | \href{https://portfolio-react-blush-eight.vercel.app}{Portfolio}\\
+}
+
+\raggedright
+
+\section{Summary}
+Full Stack Developer with \textbf{3+ years of experience} in \textbf{Angular, React, Spring Boot and Node.js}. Skilled in \textbf{REST APIs} and \textbf{MySQL/PostgreSQL} optimization, clean code and Agile delivery. Now expanding into \textbf{AI engineering} with LLM fine-tuning and Text-to-SQL.
+\sectionsep
+
+\section{Experience}
+\runsubsection{OASYS CYBERNETICS PVT. LTD}
+\descript{| Software Developer}
+\location{Aug 2023 - Present | Trichy}
+\begin{itemize}
+  \item Build enterprise \textbf{ERP} and HR apps with Angular, React and Spring Boot.
+  \item Design scalable features and RESTful APIs across business modules.
+  \item Optimize MySQL and PostgreSQL queries for faster data handling.
+  \item Gather requirements with cross-functional teams and ship features on time.
+  \item Ensure quality with unit/integration tests, code reviews and Agile sprints.
+\end{itemize}
+\sectionsep
+
+\section{Projects}
+\runsubsection{COOPTEX ERP SYSTEM}
+\descript{| Angular, Spring Boot, PostgreSQL}
+\location{2023 - 2025 | Trichy}
+\begin{itemize}
+  \item Built inventory, sales and finance modules with smooth data flow.
+  \item Responsive Angular UI with secure Spring Boot APIs on PostgreSQL.
+\end{itemize}
+\sectionsep
+
+\runsubsection{OASYS EMPLOYEE PORTAL}
+\descript{| React, Spring Boot, MySQL}
+\location{2025 - Present | Trichy}
+\begin{itemize}
+  \item All-in-one platform for employees, attendance, leave and tasks.
+  \item One-time approval workflows and real-time updates for HR teams.
+\end{itemize}
+\sectionsep
+
+\runsubsection{DYNAMIC TEXT-TO-SQL PLATFORM}
+\descript{| Python, FastAPI, LoRA}
+\location{2026 - In progress}
+\begin{itemize}
+  \item Fine-tuned Qwen 2.5 3B with LoRA on Colab to turn English into SQL.
+  \item FastAPI reads live DB schemas, validates read-only SQL, returns JSON.
+\end{itemize}
+\sectionsep
+
+\runsubsection{RUPI REWARDS}
+\descript{| Flutter, Node.js, MySQL}
+\location{2026 | Live on Google Play}
+\begin{itemize}
+  \item Built with AI-assisted dev: rewards, referrals and UPI withdrawals.
+  \item Deployed Node.js API, MySQL and React admin on a Hostinger VPS.
+\end{itemize}
+\sectionsep
+
+\section{Technical Skills}
+\textbf{Frontend:} React, Angular, JavaScript, TypeScript, HTML5, CSS3, Bootstrap 5 \\
+\textbf{Backend:} Java, Spring Boot, Node.js, Express.js, REST APIs, Python, FastAPI \\
+\textbf{Databases:} MySQL, PostgreSQL, MongoDB \\
+\textbf{AI \& ML:} LLM Fine-tuning (LoRA), Text-to-SQL, Google Colab, AI-assisted Development \\
+\textbf{DevOps \& Tools:} Docker, Git, GitHub, GitLab, Postman, Swagger, VS Code, DBeaver \\
+\textbf{Cloud \& Hosting:} Vercel, Render, Firebase, Hostinger VPS
+\sectionsep
+
+\section{Education}
+\runsubsection{Jayaram College of Engineering and Technology}
+\descript{| B.E. in Computer Science (CSE)}
+\location{2017 - 2021 | Pagalavadi, Trichy | CGPA: 7.5 / 10.0}
+\vspace{3pt}
+\runsubsection{E.R. Higher Secondary School}
+\descript{| Higher Secondary (Computer Science)}
+\location{May 2017 | Anna Salai, Trichy | Percentage: 74.5\%}
+\sectionsep
+
+\section{Certifications}
+\runsubsection{OpenAI Academy}
+\descript{| Agents and Workflows, Applied AI Foundations, AI Foundations (Aug 2026)}
+\runsubsection{DDUGKY}
+\descript{| Application Developer - Web Mobile, NSQF Level 6 (Sep 2022 - Feb 2023)}
+
+\end{document}

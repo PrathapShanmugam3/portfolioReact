@@ -41,6 +41,12 @@
       "description": "Screenshot of the Expense Tracker App",
       "imageUrl": "/img/expense.jpeg",
       "imageHint": "expense tracker"
+    },
+    {
+      "id": "rupi-rewards-image",
+      "description": "Screenshots of the Rupi Rewards app",
+      "imageUrl": "/img/rupi-rewards.jpeg",
+      "imageHint": "rewards mobile app"
     }
   ]
 }

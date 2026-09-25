@@ -1,24 +1,50 @@
+"use client"
+
 import { data } from "@/lib/data"
-import { Briefcase } from "lucide-react"
+import { Briefcase, CheckCircle2, MapPin } from "lucide-react"
+import { Reveal, trackSpotlight } from "./reveal"
 
 export function Experience() {
   return (
-    <div className="relative">
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-border -translate-x-3 md:translate-x-0"></div>
+    <div className="relative space-y-10">
       {data.workExperience.map((job, index) => (
-        <div key={index} className="relative pl-8 md:pl-10 mb-12 last:mb-0">
-          <div className="absolute left-0 top-1.5 -translate-x-6 md:-translate-x-3.5 h-6 w-6 rounded-full bg-background flex items-center justify-center border-2 border-primary">
-            <Briefcase className="h-3 w-3 text-primary" />
+        <Reveal key={index}>
+          <div
+            onMouseMove={trackSpotlight}
+            className="spotlight-card glass grid gap-8 rounded-[2rem] p-6 md:grid-cols-[240px_1fr] md:p-10"
+          >
+            <div className="md:sticky md:top-28 md:self-start">
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-lg shadow-primary/30">
+                <Briefcase className="h-6 w-6" />
+              </div>
+              <p className="mt-5 inline-flex items-center gap-2 rounded-full border px-3 py-1 font-code text-xs">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                {job.period}
+              </p>
+              <h3 className="mt-4 font-headline text-2xl font-bold leading-tight">{job.company}</h3>
+              <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
+                <MapPin className="h-3.5 w-3.5" /> {job.location}
+              </p>
+            </div>
+
+            <div>
+              <p className="font-headline text-xl font-semibold text-gradient">{job.role}</p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {job.tasks.map((task, i) => (
+                  <Reveal
+                    as="li"
+                    key={i}
+                    delay={i * 70}
+                    className="group flex gap-3 rounded-2xl border border-transparent bg-secondary/50 p-4 text-sm leading-relaxed text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary transition-transform group-hover:scale-125" />
+                    {task}
+                  </Reveal>
+                ))}
+              </ul>
+            </div>
           </div>
-          <p className="text-sm text-muted-foreground">{job.period}</p>
-          <h3 className="font-semibold text-lg font-headline mt-1">{job.role}</h3>
-          <p className="text-muted-foreground font-medium">{job.company} - {job.location}</p>
-          <ul className="mt-4 space-y-2 list-disc list-inside text-muted-foreground">
-            {job.tasks.map((task, i) => (
-              <li key={i}>{task}</li>
-            ))}
-          </ul>
-        </div>
+        </Reveal>
       ))}
     </div>
   )

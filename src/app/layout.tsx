@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -15,8 +15,13 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
+
 export const metadata: Metadata = {
-  title: "Prathap's Portfolio",
+  title: 'Prathap Shanmugam — Full Stack Developer',
   description: 'Full Stack Developer Portfolio for Prathap Shanmugam',
 };
 
@@ -29,14 +34,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'font-body antialiased',
+          'font-body antialiased noise',
           inter.variable,
-          spaceGrotesk.variable
+          spaceGrotesk.variable,
+          jetbrainsMono.variable
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

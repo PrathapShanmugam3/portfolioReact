@@ -1,38 +1,49 @@
+import { Background } from '@/components/background';
+import { Contact } from '@/components/contact';
+import { Education } from '@/components/education';
+import { Experience } from '@/components/experience';
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
-import { Experience } from '@/components/experience';
-import { Skills } from '@/components/skills';
+import { Marquee } from '@/components/marquee';
 import { Projects } from '@/components/projects';
-import { Education } from '@/components/education';
-import { Footer } from '@/components/footer';
+import { SectionHeading } from '@/components/section-heading';
+import { Skills } from '@/components/skills';
+import { WhatsAppButton } from '@/components/whatsapp-button';
 
 export default function Home() {
-  const sectionGap = "py-16 lg:py-24";
+  const sectionGap = "scroll-mt-24 py-20 lg:py-28";
   return (
-    <div className="bg-background text-foreground">
+    <div className="relative overflow-x-clip text-foreground">
+      <Background />
       <Header />
-      <main className="container mx-auto max-w-5xl px-4 md:px-8">
-        <div id="hero" className="pt-24 lg:pt-32">
+      <main className="container mx-auto max-w-6xl px-4 md:px-8">
+        <div id="hero" className="scroll-mt-24 pt-28 lg:pt-32">
           <Hero />
         </div>
-        <div id="experience" className={sectionGap}>
-           <h2 className="text-3xl font-bold tracking-tight text-center font-headline mb-12">Work Experience</h2>
+        <Marquee />
+        <section id="experience" className={sectionGap}>
+          <SectionHeading index="01" eyebrow="Where I've worked" title="Work" highlight="Experience" />
           <Experience />
-        </div>
-        <div id="skills" className={sectionGap}>
-          <h2 className="text-3xl font-bold tracking-tight text-center font-headline mb-12">Key Skills</h2>
+        </section>
+        <section id="skills" className={sectionGap}>
+          <SectionHeading index="02" eyebrow="My toolbox" title="Skills &" highlight="Technologies" />
           <Skills />
-        </div>
-        <div id="projects" className={sectionGap}>
-          <h2 className="text-3xl font-bold tracking-tight text-center font-headline mb-12">Projects</h2>
+        </section>
+        <section id="projects" className={sectionGap}>
+          <SectionHeading index="03" eyebrow="Things I've built" title="Featured" highlight="Projects" />
           <Projects />
-        </div>
-        <div id="education" className={sectionGap}>
-          <h2 className="text-3xl font-bold tracking-tight text-center font-headline mb-12">Education & Certifications</h2>
+        </section>
+        <section id="education" className={sectionGap}>
+          <SectionHeading index="04" eyebrow="Learning path" title="Education &" highlight="Certifications" />
           <Education />
-        </div>
+        </section>
+        <section id="contact" className={sectionGap}>
+          <Contact />
+        </section>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

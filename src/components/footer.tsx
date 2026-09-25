@@ -1,33 +1,28 @@
 import { data } from "@/lib/data";
-import { Button } from "./ui/button";
-import { Github, Gitlab, Linkedin } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t">
-      <div className="container mx-auto max-w-5xl px-4 md:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="relative mt-10 overflow-hidden border-t">
+      <p
+        aria-hidden
+        className="text-outline pointer-events-none select-none whitespace-nowrap text-center font-headline text-[18vw] font-bold leading-none opacity-60"
+      >
+        {data.name.split(' ')[0].toUpperCase()}
+      </p>
+      <div className="container mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 pb-8 md:flex-row md:px-8">
         <p className="text-sm text-muted-foreground">
-          &copy; {currentYear} {data.name}. All rights reserved.
+          &copy; {currentYear} {data.name}. Designed &amp; built with Next.js.
         </p>
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
-            <a href={data.socials.find(s => s.name === 'GitHub')?.url} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <Github className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a href={data.socials.find(s => s.name === 'GitLab')?.url} target="_blank" rel="noreferrer" aria-label="GitLab">
-              <Gitlab className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a href={data.socials.find(s => s.name === 'LinkedIn')?.url} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5" />
-            </a>
-          </Button>
-        </div>
+        <a
+          href="#hero"
+          className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition-colors hover:border-primary hover:text-primary"
+        >
+          Back to top
+          <ArrowUp className="h-4 w-4 transition-transform group-hover:-translate-y-1" />
+        </a>
       </div>
     </footer>
   );

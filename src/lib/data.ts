@@ -39,7 +39,7 @@ export const data: PortfolioData = {
     },
   ],
   summary:
-    'Full-Stack Developer with over 2.5 + years of experience in designing and delivering scalable web applications using Angular, React, Spring Boot, and Node.js. Proficient in building RESTful APIs, and optimizing databases including MySQL, MongoDB, and PostgreSQL. Skilled in developing dynamic, user-friendly interfaces and ensuring backend efficiency through clean code practices, CI/CD pipelines, and Agile methodologies. Adept at collaborating with cross-functional teams, solving complex problems, and delivering high-quality solutions that enhance performance and user experience.',
+    'Full-Stack Developer with 3+ years of experience in designing and delivering scalable web applications using Angular, React, Spring Boot, and Node.js. Proficient in building RESTful APIs, and optimizing databases including MySQL, MongoDB, and PostgreSQL. Skilled in developing dynamic, user-friendly interfaces and ensuring backend efficiency through clean code practices, CI/CD pipelines, and Agile methodologies. Adept at collaborating with cross-functional teams, solving complex problems, and delivering high-quality solutions that enhance performance and user experience.',
   workExperience: [
     {
       company: 'OASYS Cybernetics Pvt. Ltd',
@@ -75,6 +75,25 @@ export const data: PortfolioData = {
     },
   ],
   personalProjects: [
+    {
+      name: 'Rupi Rewards — Earn & Cash-out App',
+      description:
+        'A live rewards app on Google Play where users earn points from daily tasks, offerwalls, scratch cards, daily check-ins, secret codes and referrals, then withdraw to UPI. Built end to end with AI-assisted "vibe coding": a Flutter mobile app with Google Sign-In and push notifications, a Node.js + Express REST API with JWT auth and Socket.io, a MySQL database, and a React admin panel for managing offers, users and payouts. Offer18 postback tracking credits rewards automatically. Self-hosted on a Hostinger VPS.',
+      tech: ['Flutter', 'Node.js', 'Express', 'MySQL', 'React', 'Firebase', 'Hostinger VPS'],
+      liveDemo: 'https://play.google.com/store/apps/details?id=com.reward.server',
+      liveLabel: 'Google Play',
+      image: 'rupi-rewards-image',
+      status: 'Live on Play Store',
+    },
+    {
+      name: 'Dynamic Text-to-SQL Intelligence Platform',
+      description:
+        'An AI platform that turns plain-English questions into SQL. It connects to MySQL or PostgreSQL at runtime, reads the live schema, and sends the schema and question to a fine-tuned Qwen 2.5 3B LoRA model trained on Google Colab. Generated queries are validated as read-only (SELECT/WITH) before running, and results are returned as JSON through a FastAPI service packaged with Docker.',
+      tech: ['Python', 'FastAPI', 'Qwen 2.5 LoRA', 'Google Colab', 'MySQL', 'PostgreSQL', 'Docker'],
+      codeLink: 'https://github.com/PrathapShanmugam3/dynamic_text2sql_fastapi',
+      image: 'text2sql-image',
+      status: 'In progress',
+    },
     {
       name: 'TODO App',
       description:
@@ -139,6 +158,18 @@ export const data: PortfolioData = {
       ],
     },
     {
+      category: 'AI & Machine Learning',
+      technologies: [
+        { name: 'Python', icon: null },
+        { name: 'FastAPI', icon: null },
+        { name: 'LLM Fine-tuning (LoRA)', icon: null },
+        { name: 'Text-to-SQL', icon: null },
+        { name: 'Google Colab', icon: null },
+        { name: 'AI Agents & Workflows', icon: null },
+        { name: 'Vibe Coding (AI-assisted dev)', icon: null },
+      ],
+    },
+    {
       category: 'DevOps & Tools',
       technologies: [
         { name: 'Docker', icon: Docker },
@@ -158,6 +189,7 @@ export const data: PortfolioData = {
         { name: 'GitHub Pages', icon: GitHub },
         { name: 'Vercel', icon: Vercel },
         { name: 'Render', icon: Render },
+        { name: 'Hostinger VPS', icon: null },
       ],
     },
   ],
@@ -177,9 +209,32 @@ export const data: PortfolioData = {
   ],
   certifications: [
     {
+      name: 'Agents and Workflows',
+      institution: 'OpenAI Academy',
+      period: 'Aug 2026',
+      credentialId: '9ndwjq6t4l',
+    },
+    {
+      name: 'Applied AI Foundations',
+      institution: 'OpenAI Academy',
+      period: 'Aug 2026',
+      credentialId: 'k60onlx7mr',
+    },
+    {
+      name: 'AI Foundations',
+      institution: 'OpenAI Academy',
+      period: 'Aug 2026',
+      credentialId: '2ho78cyxkm',
+    },
+    {
       name: 'Application Developer – Web Mobile (SSC/Q8403), Level 6',
       institution: 'DDUGKY, KRK Educational Trust, Trichy',
       period: 'Sep 2022 – Feb 2023',
     },
   ],
 };
+
+/** Opens a WhatsApp chat with the mobile number above, with a friendly message pre-filled. */
+export const whatsappUrl = `https://wa.me/${data.mobile.replace(/\D/g, '')}?text=${encodeURIComponent(
+  "Hi Prathap, I saw your portfolio and would like to connect."
+)}`;

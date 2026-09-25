@@ -6,7 +6,9 @@ export interface Project {
     tech: string[];
     image: string;
     liveDemo?: string;
+    liveLabel?: string;
     codeLink?: string;
+    status?: string;
 }
 
 export interface Skill {
@@ -43,6 +45,7 @@ export interface Certification {
     name: string;
     institution: string;
     period: string;
+    credentialId?: string;
 }
 
 export interface PortfolioData {
